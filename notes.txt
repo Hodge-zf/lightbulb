@@ -1,0 +1,37 @@
+independent properties:
+//shape
+--bulbous
+--cylindrical
+--teardrop
+--spiral
+
+//glass (composition)
+--Glass
+--Quartz
+
+//color (of glass)
+--RBG value
+
+Dependent properties:
+(ask bulb type -> switch statement -> call methods to assign properties?)
+//bulb type
+--Fluorescent
+--Incandescent
+--Halogen
+--Light-emitting Diode
+
+//double: wattage
+
+//filament
+--coil
+--coiled coil
+
+//gas
+--argon
+--neon
+--mercury
+--xenon
+
+//color (of light)
+--white
+--yellow
