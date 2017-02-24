@@ -1,4 +1,4 @@
-//package lightbulb.edu.jalc.lightbulb;
+package edu.jalc.glass;
 
 public class BulbType{
 
