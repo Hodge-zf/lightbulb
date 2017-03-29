@@ -1,6 +1,6 @@
-##Randy Hodge
-#JALC Spring 2017
-#POJO Lab - Lightbulb
+## Randy Hodge
+# JALC Spring 2017
+# POJO Lab - Lightbulb
 **Goals**
 * create plain old Java objects (POJOs)
 * instantiate this object
