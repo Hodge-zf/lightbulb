@@ -1,8 +1,10 @@
 ## Randy Hodge
 # JALC Spring 2017
 # POJO Lab - Lightbulb
+
 **Goals**
 * create plain old Java objects (POJOs)
+
 **Rules**
 * instantiate this object
 * identify & define object's properties
@@ -15,10 +17,12 @@
 * Submitted by 11:59pm, 02-17-17
 
 # Lab 3 - Interfaces
+
 **Goals**
 * introduce usage of interfaces and their implementations
 * Reinforce the Interface Segregation Principle
 * demonstrate capability to improve on previous work
+
 **Rules**
 * discuss the design change of POJO lab *(must be approved)*
 * add action methods via the interface mechanism

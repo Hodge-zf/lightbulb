@@ -1,19 +1,27 @@
 package edu.jalc.assembly;
 
 import edu.jalc.assembly.Lightbulb;
+import edu.jalc.contact.ContactHousing;
+import edu.jalc.contact.ContactIn;
+import edu.jalc.contact.ContactOut;
+import edu.jalc.filament.Filament;
+import edu.jalc.gas.Gas;
 import edu.jalc.glass.BulbMaterial;
 import edu.jalc.glass.BulbType;
-import edu.jalc.filament;
 
 public class LightbulbApp{
   public static void main(String[] args) throws Exception{
 
+
+
     BulbType bulbType = new BulbType(4,"teardrop");
     BulbMaterial bulbMaterial = new BulbMaterial("glass",0.001);
     Filament filament = new Filament(2,"tungsten");
-    Gas gas = new Gas(75,"Argon")
-    ContactHousing contactHousing = new ContactHousing;
-    Lightbulb lightBulb = new Lightbulb(120,bulbType,bulbMaterial,filament,contactHousing);
+    Gas gas = new Gas(75,"Argon");
+    ContactIn contactIn = new ContactIn();
+    ContactOut contactOut = new ContactOut();
+    ContactHousing contactHousing = new ContactHousing(contactIn, contactOut);
+    Lightbulb lightBulb = new Lightbulb(120,bulbType,bulbMaterial,filament,gas,contactHousing);
 
     System.out.println("Bulb Wattage: "+lightBulb.getWattage()+'W');
     System.out.println("Bulb length: "+bulbType.getLength()+" inches");

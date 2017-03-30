@@ -1,6 +1,6 @@
 package edu.jalc.contact;
-import edu.jalc.contact.contactIn;
-import edu.jalc.contact.contactOut;
+import edu.jalc.contact.ContactIn;
+import edu.jalc.contact.ContactOut;
 
 public class ContactHousing{
 
