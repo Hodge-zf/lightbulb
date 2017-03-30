@@ -4,8 +4,8 @@ import edu.jalc.contact.contactOut;
 
 public class ContactHousing{
 
-  ContactIn contactIn;
-  ContactOut contactOut;
+  private ContactIn contactIn;
+  private ContactOut contactOut;
   public ContactHousing(ContactIn contactIn, ContactOut contactOut){
     this.contactIn = contactIn;
     this.contactOut = contactOut;

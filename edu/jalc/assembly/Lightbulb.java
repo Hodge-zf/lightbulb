@@ -9,11 +9,12 @@ import edu.jalc.contact.ContactHousing;
 public class Lightbulb{
 
   private int wattage;
-  BulbType bulbType;
-  BulbMaterial bulbMaterial;
-  Filament filament;
-  Gas gas;
-  ContactHousing contactHousing;
+  private BulbType bulbType;
+  private BulbMaterial bulbMaterial;
+  private Filament filament;
+  private Gas gas;
+  private ContactHousing contactHousing;
+
   public Lightbulb(int wattage,BulbType bulbType, BulbMaterial bulbMaterial, Filament filament, Gas gas, ContactHousing contactHousing){
     this.wattage = wattage;
     this.bulbType = bulbType;
@@ -22,7 +23,7 @@ public class Lightbulb{
     this.gas = gas;
     this.contactHousing = contactHousing;
   }
-  int getWattage(){
+  public int getWattage(){
     return wattage;
   }
 }
