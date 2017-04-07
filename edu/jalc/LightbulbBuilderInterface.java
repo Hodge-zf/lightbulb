@@ -1,6 +1,7 @@
 package edu.jalc;
 
 import edu.jalc.assembly.Lightbulb;
+import edu.jalc.electricity.Electricity;
 import edu.jalc.contact.ContactHousing;
 import edu.jalc.contact.ContactIn;
 import edu.jalc.contact.ContactOut;
