@@ -11,8 +11,17 @@ import edu.jalc.glass.BulbType;
 
 public interface LightbulbBuilderInterface{
 
-  public LightbulbBuilder createContactStructure(){}
-  public LightbulbBuilder installFilament(){}
-  public LightbulbBuilder addGas(){}
-  public LightbulbBuilder manufactureBulb(){}
+  //Things that the user is given a choice in
+  void LightbulbBuilder setAmountWattage(int wattage);
+  void LightbulbBuilder chooseFilamentCoilingLevel(int coilingLevel);
+  void LightbulbBuilder inputFilamentElement(String filamentElement);
+  void LightbulbBuilder setGasVolume(double gasVolume);
+  void LightbulbBuilder selectGasElement(String gasElement);
+  void LightbulbBuilder chooseBulbShape(String shape);
+  void LightbulbBuilder setBulbLength(double length);
+  void LightbulbBuilder selectBulbMaterial(String material);
+  void LightbulbBuilder setBulbThickness(double thickness);
+
+  Lightbulb build();
+  //Things that the user cannot change will be hidden under here
 }

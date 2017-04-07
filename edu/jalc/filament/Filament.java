@@ -1,6 +1,6 @@
 package edu.jalc.filament;
 
-public class Filament{
+public final class Filament{
 
   private final int coilingLevel;
   private final String filamentElement;
