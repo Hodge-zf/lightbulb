@@ -3,5 +3,5 @@ import edu.jalc.electricity.Electricity;
 
 public interface Brightenable{
 
-  public Electricity dim(int wattage);
+  public int brighten(int wattage);
 }

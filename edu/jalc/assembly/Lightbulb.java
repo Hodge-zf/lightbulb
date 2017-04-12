@@ -15,6 +15,8 @@ public class Lightbulb{
   private Filament filament;
   private Gas gas;
   private ContactHousing contactHousing;
+  private boolean switchIsOn;
+
 
   public Lightbulb(Electricity electricity,BulbType bulbType, BulbMaterial bulbMaterial, Filament filament, Gas gas, ContactHousing contactHousing){
     this.electricity = electricity;
@@ -23,5 +25,13 @@ public class Lightbulb{
     this.filament = filament;
     this.gas = gas;
     this.contactHousing = contactHousing;
+  }
+  public boolean switchOn(boolean switchIsOn){
+    this.switchIsOn = true;
+    return switchIsOn;
+  }
+  public boolean switchOff(boolean switchIsOn){
+    this.switchIsOn = false;
+    return switchIsOn;
   }
 }
