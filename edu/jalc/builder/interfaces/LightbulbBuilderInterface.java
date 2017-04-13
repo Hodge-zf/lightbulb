@@ -1,4 +1,4 @@
-package edu.jalc.builder;
+package edu.jalc.builder.interfaces;
 
 import edu.jalc.assembly.Lightbulb;
 import edu.jalc.electricity.Electricity;

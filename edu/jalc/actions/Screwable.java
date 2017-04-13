@@ -1,4 +1,4 @@
-package edu.jalc.interfaces;
+package edu.jalc.actions;
 
 public interface Screwable{
 

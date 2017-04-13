@@ -1,5 +1,5 @@
 package edu.jalc.contact;
-import edu.jalc.interfaces.Screwable;
+import edu.jalc.actions.Screwable;
 import edu.jalc.contact.ContactIn;
 import edu.jalc.contact.ContactOut;
 

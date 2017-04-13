@@ -1,4 +1,4 @@
-package edu.jalc.interfaces;
+package edu.jalc.actions;
 import edu.jalc.electricity.Electricity;
 
 public interface Dimmable{

@@ -1,5 +1,6 @@
 package edu.jalc.builder;
 
+import edu.jalc.builder.interfaces.LightbulbBuilderInterface;
 import edu.jalc.assembly.Lightbulb;
 import edu.jalc.electricity.Electricity;
 import edu.jalc.contact.ContactHousing;
