@@ -91,19 +91,5 @@ public class HalogenBulbBuilder extends LightbulbBuilder{
     System.out.println("The gaseous element is: "+gas.getGasElement());
     return new Lightbulb(electricity,bulbType,bulbMaterial,filament,gas,contactHousing);
   }
-  /*
-  public static void main(String[] args){
 
-    Lightbulb halogenBulb = new HalogenBulbBuilder()
-      .setAmountWattage()
-      .chooseFilamentCoilingLevel()
-      .inputFilamentElement()
-      .setGasVolume()
-      .selectGasElement()
-      .chooseBulbShape()
-      .setBulbLength()
-      .selectBulbMaterial()
-      .setBulbThickness()
-      .build();
-    }*/
 }

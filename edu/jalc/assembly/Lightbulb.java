@@ -6,8 +6,9 @@ import edu.jalc.glass.BulbMaterial;
 import edu.jalc.filament.Filament;
 import edu.jalc.gas.Gas;
 import edu.jalc.contact.ContactHousing;
+import edu.jalc.actions.*;
 
-public class Lightbulb{
+public class Lightbulb implements Screwable, Switchable{
 
   private Electricity electricity;
   private BulbType bulbType;
@@ -25,13 +26,37 @@ public class Lightbulb{
     this.filament = filament;
     this.gas = gas;
     this.contactHousing = contactHousing;
+    this.switchIsOn = switchIsOn;
   }
-  public boolean switchOn(boolean switchIsOn){
-    this.switchIsOn = true;
+
+  public void screwIn(){
+    System.out.println("You screwed the lightbulb in");
+  }
+
+  public void screwOut(){
+    if (switchIsOn) {
+      System.out.println("You burned your hand!");
+    }
+    else{
+    System.out.println("You took out the lightbulb");
+    }
+  }
+
+  public void screwOutHalfway(){
+    if (switchIsOn) {
+      System.out.println("You burned your hand!");
+    }
+    else{
+    System.out.println("You unscrewed the lightbulb but left it in place");
+    }
+  }
+  public boolean switchOn(){
+    System.out.println("You turned the switch on");
     return switchIsOn;
   }
-  public boolean switchOff(boolean switchIsOn){
-    this.switchIsOn = false;
-    return switchIsOn;
+  public boolean switchOff(){
+    System.out.println("You turned the switch off");
+    return !switchIsOn;
   }
+
 }

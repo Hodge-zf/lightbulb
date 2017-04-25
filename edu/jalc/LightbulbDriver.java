@@ -23,5 +23,9 @@ public class LightbulbDriver{
       .selectBulbMaterial()
       .setBulbThickness()
       .build();
+    halogenBulb.screwIn();
+    halogenBulb.switchOn();
+    halogenBulb.screwOut();
     }
+
   }
