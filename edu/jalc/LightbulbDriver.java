@@ -24,7 +24,12 @@ public class LightbulbDriver{
       .setBulbThickness()
       .build();
     halogenBulb.screwIn();
-    halogenBulb.switchOn();
+    halogenBulb.switchOn(halogenBulb.getSwitchStatus());
+    halogenBulb.screwOut();
+    halogenBulb.switchOff(halogenBulb.getSwitchStatus());
+    halogenBulb.screwOutHalfway();
+    halogenBulb.screwIn();
+    halogenBulb.switchOn(halogenBulb.getSwitchStatus());
     halogenBulb.screwOut();
     }
 

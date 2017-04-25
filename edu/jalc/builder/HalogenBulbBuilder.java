@@ -89,7 +89,7 @@ public class HalogenBulbBuilder extends LightbulbBuilder{
     System.out.println("Filament composed of: "+filament.getFilamentElement());
     System.out.println("The volume of the gas is: "+gas.getGasVolume()+"mL");
     System.out.println("The gaseous element is: "+gas.getGasElement());
-    return new Lightbulb(electricity,bulbType,bulbMaterial,filament,gas,contactHousing);
+    return new Lightbulb(electricity,bulbType,bulbMaterial,filament,gas,contactHousing,1);
   }
 
 }

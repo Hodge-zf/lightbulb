@@ -16,47 +16,54 @@ public class Lightbulb implements Screwable, Switchable{
   private Filament filament;
   private Gas gas;
   private ContactHousing contactHousing;
-  private boolean switchIsOn;
+  private int switchStatus;
 
-
-  public Lightbulb(Electricity electricity,BulbType bulbType, BulbMaterial bulbMaterial, Filament filament, Gas gas, ContactHousing contactHousing){
+  public Lightbulb(Electricity electricity,BulbType bulbType, BulbMaterial bulbMaterial, Filament filament, Gas gas, ContactHousing contactHousing,int switchStatus){
     this.electricity = electricity;
     this.bulbType = bulbType;
     this.bulbMaterial = bulbMaterial;
     this.filament = filament;
     this.gas = gas;
     this.contactHousing = contactHousing;
-    this.switchIsOn = switchIsOn;
+    this.switchStatus = switchStatus;
   }
 
+  public int switchOn(int switchStatus){
+    System.out.println("You turned the switch on");
+    return this.switchStatus = 0;
+  }
+
+  public int switchOff(int switchStatus){
+    System.out.println("You turned the switch off");
+    return this.switchStatus = 1;
+  }
   public void screwIn(){
     System.out.println("You screwed the lightbulb in");
   }
 
   public void screwOut(){
-    if (switchIsOn) {
-      System.out.println("You burned your hand!");
-    }
-    else{
-    System.out.println("You took out the lightbulb");
+    switch (switchStatus) {
+      case 0: System.out.println("You burned your hand trying to unscrew it!");
+              break;
+      case 1: System.out.println("You took out the lightbulb");
+              break;
+      default: break;
     }
   }
 
   public void screwOutHalfway(){
-    if (switchIsOn) {
-      System.out.println("You burned your hand!");
+    switch (switchStatus) {
+      case 0: System.out.println("You burned your hand trying to unscrew it!");
+              break;
+      case 1: System.out.println("You unscrewed the lightbulb but left it in place");
+              break;
+      default: break;
     }
-    else{
-    System.out.println("You unscrewed the lightbulb but left it in place");
-    }
   }
-  public boolean switchOn(){
-    System.out.println("You turned the switch on");
-    return switchIsOn;
+
+  public int getSwitchStatus(){
+    return switchStatus;
   }
-  public boolean switchOff(){
-    System.out.println("You turned the switch off");
-    return !switchIsOn;
-  }
+
 
 }
