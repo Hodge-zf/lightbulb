@@ -11,54 +11,57 @@ import edu.jalc.gas.Gas;
 import edu.jalc.glass.BulbMaterial;
 import edu.jalc.glass.BulbType;
 
-public class LightbulbBuilder implements LightbulbBuilderInterface{
 
-private int wattage;
-private int coilingLevel;
-private String filamentElement;
-private double gasVolume;
-private String gasElement;
-private String shape;
-private double length;
-private String material;
-private double thickness;
+abstract public class LightbulbBuilder implements LightbulbBuilderInterface{
 
-public void setAmountWattage(int wattage){
+int wattage;
+int coilingLevel;
+String filamentElement;
+double gasVolume;
+String gasElement;
+String shape;
+double length;
+String material;
+double thickness;
+Lightbulb lightbulb;
+
+public LightbulbBuilderInterface setAmountWattage(int wattage){
   this.wattage = wattage;
+  return this;
 }
-public void chooseFilamentCoilingLevel(int coilingLevel){
+public LightbulbBuilderInterface chooseFilamentCoilingLevel(int coilingLevel){
   this.coilingLevel = coilingLevel;
+  return this;
 }
-public void inputFilamentElement(String filamentElement){
+public LightbulbBuilderInterface inputFilamentElement(String filamentElement){
   this.filamentElement = filamentElement;
+  return this;
 }
-public void setGasVolume(double gasVolume){
+public LightbulbBuilderInterface setGasVolume(double gasVolume){
   this.gasVolume = gasVolume;
+  return this;
 }
-public void selectGasElement(String gasElement){
+public LightbulbBuilderInterface selectGasElement(String gasElement){
   this.gasElement = gasElement;
+  return this;
 }
-public void chooseBulbShape(String shape){
+public LightbulbBuilderInterface chooseBulbShape(String shape){
   this.shape = shape;
+  return this;
 }
-public void setBulbLength(double length){
+public LightbulbBuilderInterface setBulbLength(double length){
   this.length = length;
+  return this;
 }
-public void selectBulbMaterial(String material){
+public LightbulbBuilderInterface selectBulbMaterial(String material){
   this.material = material;
+  return this;
 }
-public void setBulbThickness(double thickness){
+public LightbulbBuilderInterface setBulbThickness(double thickness){
   this.thickness = thickness;
+  return this;
 }
 public Lightbulb build(){
-  Electricity electricity = new Electricity(wattage);
-  BulbType bulbType = new BulbType(length,shape);
-  BulbMaterial bulbMaterial = new BulbMaterial(material,thickness);
-  Filament filament = new Filament(coilingLevel,filamentElement);
-  Gas gas = new Gas(gasVolume,gasElement);
-  ContactIn contactIn = new ContactIn();
-  ContactOut contactOut = new ContactOut();
-  ContactHousing contactHousing = new ContactHousing(contactIn, contactOut);
-  return new Lightbulb(electricity,bulbType,bulbMaterial,filament,gas,contactHousing);
+  return this.lightbulb;
 }
 }
