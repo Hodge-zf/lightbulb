@@ -17,15 +17,15 @@ public class HalogenBulbBuilder extends LightbulbBuilder{
 
 
 
-  public static int wattage;
-  public static int coilingLevel;
-  public static String filamentElement;
-  public static double gasVolume;
-  public static String gasElement;
-  public static String shape;
-  public static double length;
-  public static String material;
-  public static double thickness;
+  private int wattage;
+  private int coilingLevel;
+  private String filamentElement;
+  private double gasVolume;
+  private String gasElement;
+  private String shape;
+  private double length;
+  private String material;
+  private double thickness;
 
   public LightbulbBuilderInterface setAmountWattage(){
     this.wattage = 120;
