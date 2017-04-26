@@ -12,12 +12,4 @@ public class Electricity{
   public int getWattage(){
     return wattage;
   }
-  public int brighten(int wattage){
-    this.wattage = wattage++;
-    return wattage;
-  }
-  public int dim(int wattage){
-    this.wattage = wattage--;
-    return wattage;
-  }
 }

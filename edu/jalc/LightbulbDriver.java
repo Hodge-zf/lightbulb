@@ -29,8 +29,11 @@ public class LightbulbDriver{
     halogenBulb.switchOff(halogenBulb.getSwitchStatus());
     halogenBulb.screwOutHalfway();
     halogenBulb.screwIn();
-    halogenBulb.switchOn(halogenBulb.getSwitchStatus());
-    halogenBulb.screwOut();
+    halogenBulb.brighten(halogenBulb.electricity.getWattage());
+    halogenBulb.glow();
+    halogenBulb.dim(halogenBulb.electricity.getWattage());
+    halogenBulb.dim(halogenBulb.electricity.getWattage());
+    halogenBulb.glow();
     }
 
   }

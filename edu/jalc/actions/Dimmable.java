@@ -3,5 +3,5 @@ import edu.jalc.electricity.Electricity;
 
 public interface Dimmable{
 
-  public void dim(int amount);
+  public int dim(int initial);
 }

@@ -8,15 +8,16 @@ import edu.jalc.gas.Gas;
 import edu.jalc.contact.ContactHousing;
 import edu.jalc.actions.*;
 
-public class Lightbulb implements Screwable, Switchable{
+public class Lightbulb implements Screwable, Switchable, Brightenable, Dimmable{
 
-  private Electricity electricity;
+  public Electricity electricity;
   private BulbType bulbType;
   private BulbMaterial bulbMaterial;
   private Filament filament;
   private Gas gas;
   private ContactHousing contactHousing;
   private int switchStatus;
+  private int variedWattage;
 
   public Lightbulb(Electricity electricity,BulbType bulbType, BulbMaterial bulbMaterial, Filament filament, Gas gas, ContactHousing contactHousing,int switchStatus){
     this.electricity = electricity;
@@ -61,8 +62,23 @@ public class Lightbulb implements Screwable, Switchable{
     }
   }
 
+  public int brighten(int initial){
+    System.out.println("You turn the dial up, increasing Wattage by 1");
+    variedWattage = initial+1;
+    return this.variedWattage;
+  }
+  public int dim(int initial){
+    System.out.println("You turn the dial down, decreasing Wattage by 1");
+    variedWattage = initial-1;
+    return this.variedWattage;
+  }
+
   public int getSwitchStatus(){
     return switchStatus;
+  }
+
+  public void glow(){
+    System.out.println("The bulb glows with an intensity of "+variedWattage+" Watts");
   }
 
 

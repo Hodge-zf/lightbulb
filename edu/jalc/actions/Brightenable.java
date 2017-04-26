@@ -3,5 +3,5 @@ import edu.jalc.electricity.Electricity;
 
 public interface Brightenable{
 
-  public void brighten(int amount);
+  public int brighten(int initial);
 }
