@@ -1,3 +1,5 @@
+package edu.jalc.actions.switchmemento;
+
 public class Originator{
 
     private SwitchStatus switchStatus;

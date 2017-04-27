@@ -1,5 +1,5 @@
 package edu.jalc.actions;
-import edu.jalc.action.switchmomento.SwitchStatus;
+import edu.jalc.actions.switchmemento.*;
 
 public interface Switchable{
 

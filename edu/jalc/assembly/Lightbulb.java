@@ -7,6 +7,7 @@ import edu.jalc.filament.Filament;
 import edu.jalc.gas.Gas;
 import edu.jalc.contact.ContactHousing;
 import edu.jalc.actions.*;
+import edu.jalc.actions.switchmemento.*;
 
 public class Lightbulb implements Screwable, Switchable, Brightenable, Dimmable{
 
@@ -16,8 +17,9 @@ public class Lightbulb implements Screwable, Switchable, Brightenable, Dimmable{
   private Filament filament;
   private Gas gas;
   private ContactHousing contactHousing;
-  private SwitchStatus switchStatus;
   private int variedWattage;
+  Originator originator = new Originator();
+  SwitchStatus switchStatus;
 
   public Lightbulb(Electricity electricity,BulbType bulbType, BulbMaterial bulbMaterial, Filament filament, Gas gas, ContactHousing contactHousing,int switchStatus){
     this.electricity = electricity;
@@ -30,12 +32,18 @@ public class Lightbulb implements Screwable, Switchable, Brightenable, Dimmable{
 /* FIXME (Will implement memento pattern to return switchStatus)*/
   public SwitchStatus switchOn(){
     System.out.println("You turned the switch on");
-    return this.switchStatus = 0;
+    SwitchStatus switchStatus = SwitchStatus.ON;
+    originator.setStatus(switchStatus);
+    originator.save();
+    return originator.getStatus();
   }
 
-  public SwitchStatus switchOff(SwitchStatus switchStatus){
+  public SwitchStatus switchOff(){
     System.out.println("You turned the switch off");
-    return this.switchStatus = 1;
+    SwitchStatus switchStatus = SwitchStatus.OFF;
+    originator.setStatus(switchStatus);
+    originator.save();
+    return originator.getStatus();
   }
   public void screwIn(){
     System.out.println("You screwed the lightbulb in");
@@ -43,9 +51,9 @@ public class Lightbulb implements Screwable, Switchable, Brightenable, Dimmable{
 
   public void screwOut(){
     switch (switchStatus) {
-      case 0: System.out.println("You burned your hand trying to unscrew it!");
+      case ON: System.out.println("You burned your hand trying to unscrew it!");
               break;
-      case 1: System.out.println("You took out the lightbulb");
+      case OFF: System.out.println("You took out the lightbulb");
               break;
       default: break;
     }
@@ -53,9 +61,9 @@ public class Lightbulb implements Screwable, Switchable, Brightenable, Dimmable{
 
   public void screwOutHalfway(){
     switch (switchStatus) {
-      case 0: System.out.println("You burned your hand trying to unscrew it!");
+      case ON: System.out.println("You burned your hand trying to unscrew it!");
               break;
-      case 1: System.out.println("You unscrewed the lightbulb but left it in place");
+      case OFF: System.out.println("You unscrewed the lightbulb but left it in place");
               break;
       default: break;
     }
@@ -74,9 +82,9 @@ public class Lightbulb implements Screwable, Switchable, Brightenable, Dimmable{
     return this.variedWattage;
   }
 
-/* FIXME will need to be updated*/ 
-  public int getSwitchStatus(){
-    return switchStatus;
+/* FIXME will need to be updated*/
+  public SwitchStatus getSwitchStatus(){
+    return this.switchStatus;
   }
 
   public void glow(){

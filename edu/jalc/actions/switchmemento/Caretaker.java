@@ -1,3 +1,5 @@
+package edu.jalc.actions.switchmemento;
+
 import java.util.*;
 
 public class Caretaker{
