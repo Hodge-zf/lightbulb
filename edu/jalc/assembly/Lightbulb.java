@@ -16,7 +16,7 @@ public class Lightbulb implements Screwable, Switchable, Brightenable, Dimmable{
   private Filament filament;
   private Gas gas;
   private ContactHousing contactHousing;
-  private int switchStatus;
+  private SwitchStatus switchStatus;
   private int variedWattage;
 
   public Lightbulb(Electricity electricity,BulbType bulbType, BulbMaterial bulbMaterial, Filament filament, Gas gas, ContactHousing contactHousing,int switchStatus){
@@ -26,15 +26,14 @@ public class Lightbulb implements Screwable, Switchable, Brightenable, Dimmable{
     this.filament = filament;
     this.gas = gas;
     this.contactHousing = contactHousing;
-    this.switchStatus = switchStatus;
   }
-
-  public int switchOn(int switchStatus){
+/* FIXME (Will implement memento pattern to return switchStatus)*/
+  public SwitchStatus switchOn(){
     System.out.println("You turned the switch on");
     return this.switchStatus = 0;
   }
 
-  public int switchOff(int switchStatus){
+  public SwitchStatus switchOff(SwitchStatus switchStatus){
     System.out.println("You turned the switch off");
     return this.switchStatus = 1;
   }
@@ -62,6 +61,8 @@ public class Lightbulb implements Screwable, Switchable, Brightenable, Dimmable{
     }
   }
 
+/* FIXME end */
+
   public int brighten(int initial){
     System.out.println("You turn the dial up, increasing Wattage by 1");
     variedWattage = initial+1;
@@ -73,6 +74,7 @@ public class Lightbulb implements Screwable, Switchable, Brightenable, Dimmable{
     return this.variedWattage;
   }
 
+/* FIXME will need to be updated*/ 
   public int getSwitchStatus(){
     return switchStatus;
   }

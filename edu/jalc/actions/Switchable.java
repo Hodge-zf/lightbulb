@@ -1,7 +1,8 @@
 package edu.jalc.actions;
+import edu.jalc.action.switchmomento.SwitchStatus;
 
 public interface Switchable{
 
-  public int switchOn(int switchStatus);
-  public int switchOff(int switchStatus);
+  public SwitchStatus switchOn();
+  public SwitchStatus switchOff();
 }

@@ -1,0 +1,4 @@
+enum SwitchStatus{
+  ON,
+  OFF
+}
